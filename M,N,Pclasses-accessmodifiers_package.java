@@ -1,4 +1,4 @@
-Mclass.java-----------
+Mclass.javaprogram-----------------------------------------------------------------------
 
 
 package second_program;
@@ -28,7 +28,7 @@ public class Mclass {
 }
 
 
-Nclass.java-------------------------------
+Nclass.javaprogram-----------------------------------------------------------------------------------------
 	
 	package second_program;
 
@@ -56,7 +56,7 @@ public class Nclass {
 }
 
 
-Pclass.java----------------------
+Pclass.javaprogram---------------------------------------------------------------------------------------------------------------
 	
 	package second_program;
 
