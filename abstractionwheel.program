@@ -1,0 +1,132 @@
+package eight_program;
+
+abstract class vechile{
+	int speed = 5;
+	long distance = 1234;
+
+	vechile(){
+		System.out.println("speed:"+speed+"   "+"distance:"+distance);
+		System.out.println("vechile is created");
+		
+	}
+	
+	abstract void run(); 
+	abstract void stop(); 
+	public void fuel(int n)  
+    {
+         System.out.println(n);
+    }
+	public void fuel(float f, String s)  
+    {
+         System.out.println(f + " "+s);
+    }
+	public void fuel(char c, int num)  
+    {
+         System.out.println(c + " "+num);
+    }
+	
+}
+class Twowheels extends vechile{
+	int speed = 10;
+	long distance = 2345;
+	int no_of_tyre = 2; 
+	Twowheels(){
+		super();
+		System.out.println("speed:" +speed+ "  "+"distance:"+distance+"  "+"no_of_tyre:"+ no_of_tyre);
+		System.out.println("Twowheels vechile is created");
+	}
+	void run(){
+		System.out.println("run");
+		
+	}
+	void stop(){
+		System.out.println("stop");
+	}
+	
+	public void display(){
+		
+		System.out.println("speed:" +speed+ "  "+"distance:"+distance+"  "+"no_of_tyre:"+ no_of_tyre );
+	}
+	
+}
+class Threewheels extends Twowheels{
+	int speed = 20;
+	long distance = 3456;
+	int no_of_tyre = 3; 
+	Threewheels(){
+		super();
+		System.out.println("speed:" +speed+ "  "+"distance:"+distance+"  "+"no_of_tyre:"+ no_of_tyre);
+		System.out.println("Three wheels vechile is created");
+	}
+	void run(){
+		System.out.println("run");
+		
+	}
+	void stop(){
+		System.out.println("stop");
+	}
+	
+	public void display(){
+		
+		System.out.println("speed:" +speed+ "  "+"distance:"+distance+"  "+"no_of_tyre:"+ no_of_tyre );
+	}
+	
+}
+class Fourwheels extends Threewheels{
+	int speed = 30;
+	long distance = 4567;
+	int no_of_tyre = 4; 
+	Fourwheels(){
+		super();
+		System.out.println("speed:" +speed+ "  "+"distance:"+distance+"  "+"no_of_tyre:"+ no_of_tyre );
+		System.out.println("fourwheels vechile is created");
+	}
+	void run(){
+		System.out.println("run");
+		
+	}
+	void stop(){
+		System.out.println("stop");
+	}
+	
+	public void display(){
+		
+		System.out.println("speed:" +speed+ "  "+"distance:"+distance+"  "+"no_of_tyre:"+ no_of_tyre);
+	}
+	
+}
+class Eightwheels extends Fourwheels{
+	int speed = 10;
+	long distance = 2345;
+	int no_of_tyre = 2; 
+	Eightwheels(){
+		super();
+		System.out.println("speed:" +speed+ "  "+"distance:"+distance+"  "+"no_of_tyre:"+ no_of_tyre );
+		System.out.println("eightwheels vechile is created");
+	}
+	void run(){
+		System.out.println("run");
+		
+	}
+	void stop(){
+		System.out.println("stop");
+	}
+	
+	public void display(){
+		
+		System.out.println("speed:" +speed+ "  "+"distance:"+distance+"  "+"no_of_tyre:"+ no_of_tyre );
+	}
+	
+}
+
+public class abstractprogram {
+	public static void main(String args[]) {
+		vechile o = new Eightwheels();
+		o.stop();
+		
+	
+		
+	}
+		
+}
+
