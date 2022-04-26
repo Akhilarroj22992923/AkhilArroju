@@ -1,0 +1,61 @@
+package seventh_program;
+
+
+import java.util.*;
+
+class emp {
+
+	public String name;
+	public int age;
+	public float salary;
+
+	emp(int age,float salary, String name)
+	{
+		this.age = age;
+		this.salary = salary;
+		this.name = name;
+	}
+}
+
+class HR {
+
+	
+	private final List<emp> employees;
+
+	HR(List<emp> employees) 
+	{ 
+		this.employees = employees; 
+	}
+
+	
+	public List<emp> getTotalemployeesInHR()
+	{
+		return employees;
+	}
+}
+
+public class compositionmethod {
+	public static void main(String[] args)
+	{
+		emp b1  = new emp(18,10000,"akhil");
+		emp b2  = new emp(19,20000,"ravi");
+		emp b3  = new emp(20,30000,"sai");
+		emp b4  = new emp(21,40000,"vineesh");
+
+		
+		List<emp> data = new ArrayList<emp>();
+		data.add(b1);
+		data.add(b2);
+		data.add(b3);
+		data.add(b4);
+		
+
+		HR HR = new HR(data);
+
+		List<emp> employees = HR.getTotalemployeesInHR();
+		for (emp k : employees) {
+			System.out.println("Age : " + k.age + " and " + " salary : " + k.salary+ " and " +"Name :"+ k.name);
+		}
+	}
+}
+
