@@ -1,0 +1,49 @@
+package sixth_program;
+
+ abstract class MNC {
+	 MNC(){
+		 System.out.println("constucter:MNC");
+	 }
+	 abstract void IT();
+	 
+	 abstract void company();
+	 
+	 public void product(){
+		 System.out.println("inside MNC class: IT method");
+	 }
+	 
+ }
+ abstract class INFOSYS extends MNC {
+	 abstract void company();
+ }
+ class HELLO extends INFOSYS {
+	 HELLO(){
+		 super();
+		 System.out.println("inside HELLO class: constructer");
+		 
+	 }
+	 
+	 public void IT(){
+		 System.out.println("inside HELLO class: IT method");
+	}
+		 
+	 void company(){
+		 System.out.println("inside HELLO class: company method");
+		 
+	 }
+	 
+}
+
+public class Abstractprogram {
+
+	public static void main(String[] args) {
+		MNC obj = new HELLO();
+		obj.IT();
+		obj.product();
+		obj.company();
+		
+		// TODO Auto-generated method stub
+
+	}
+
+}
