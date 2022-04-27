@@ -1,0 +1,38 @@
+package eleventhprogram;
+
+import java.util.LinkedHashSet;
+import java.util.Scanner;
+
+public class linkedhashset {
+	public static void main(String[] args){
+		
+	
+		LinkedHashSet<String> h2=new LinkedHashSet<String>();
+    System.out.println("enter the input strings to be added:");
+		
+		Scanner input = new Scanner(System.in);
+		// TODO Auto-generated method stub
+		String s1 = input.nextLine();
+		String s2 = input.nextLine();
+		String s3 = input.nextLine();
+		String s4 = input.nextLine();
+		String s5 = input.nextLine();
+		String s6 = input.nextLine();
+		String s7 = input.nextLine();
+		String s8 = input.nextLine();
+		h2.add(s1);
+		h2.add(s2);
+		h2.add(s3);
+		h2.add(s4);
+		h2.add(s5);
+		h2.add(s6);
+		h2.add(s7);
+		h2.add(s8);
+		
+		
+	
+		System.out.println("Hashset is : "+h2);
+		
+	}
+}
+
