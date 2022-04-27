@@ -1,0 +1,55 @@
+package eleventhprogram;
+
+import java.util.Scanner;
+import java.util.TreeSet;
+
+public class treeset {
+
+	private static Object p;
+
+	public static void main(String[] args) {
+		TreeSet<String> h2=new TreeSet<String>();
+		System.out.println("enter the string:");
+		
+		Scanner input = new Scanner(System.in);
+		// TODO Auto-generated method stub
+		String s1 = input.nextLine();
+		String s2 = input.nextLine();
+		String s3 = input.nextLine();
+		String s4 = input.nextLine();
+		String s5 = input.nextLine();
+		String s6 = input.nextLine();
+		h2.add(s1);
+		h2.add(s2);
+		h2.add(s3);
+		h2.add(s4);
+		h2.add(s5);
+		h2.add(s6);
+		System.out.println("Hashset is : "+h2);
+		
+		h2.remove(s6);
+		h2.remove(s4);
+		System.out.println(" by removing : "+h2);
+		
+		h2.add(s4);
+		h2.add(s5);
+		h2.add(s6);
+		System.out.println("by adding is : "+h2);
+		String k = "java";
+		if (k.equals(h2)){
+			System.out.println("true");
+		}
+		else
+		{
+			System.out.println("false");
+		}
+		
+		h2.clear();
+	
+		System.out.println(h2);
+		
+
+
+	}
+
+}
