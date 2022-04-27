@@ -1,0 +1,24 @@
+package tenthprogram;
+
+import java.util.regex.*;
+class phoneNumber {
+    public static boolean isValid(String s)
+    {
+        Pattern p = Pattern.compile("^\\+(?:[0-9] ?){6,14}[0-9]$");
+        Matcher m = p.matcher(s);
+        return (m.matches());
+    }
+    public static void main(String[] args)
+    {
+        String s = "+91 7984286257";
+        String s_1 = "6729391";
+        if (isValid(s))
+            System.out.println("Valid Number");
+        else
+            System.out.println("Invalid Number");
+        if (isValid(s_1))
+            System.out.println("Valid Number");
+        else
+            System.out.println("Invalid Number");
+    }
+}
