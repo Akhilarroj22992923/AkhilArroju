@@ -7,7 +7,6 @@ public class Welcome{
 	}
 	public void initialScreen() {
 		System.out.println("************************************\n");
-		System.out.println("Application Name : LockedMe.com");
 		System.out.println("Developer Name   : Akhil Arroju\n");
 		System.out.println("************************************\n");
 
