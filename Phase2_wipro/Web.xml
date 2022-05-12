@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Phase2_wiproo</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+   <context-param>
+    <param-name>a</param-name>
+    <param-value> 10 </param-value>
+  </context-param>
+  <context-param>
+    <param-name>b</param-name>
+    <param-value> 20 </param-value>
+  </context-param>
+  <context-param>
+    <param-name>c</param-name>
+    <param-value> 30 </param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>servlet1</servlet-name>
+    <servlet-class>phas1package.servlet1</servlet-class>
+    <init-param>
+      <param-name>d</param-name>
+      <param-value> 50 </param-value>
+    </init-param>
+  </servlet>
+   <servlet-mapping>
+    <servlet-name>servlet1</servlet-name>
+    <url-pattern>/servlet9</url-pattern>
+  </servlet-mapping> 
+  <servlet>
+    <servlet-name>servlet2</servlet-name>
+    <servlet-class>phas1package.servlet2</servlet-class>
+    <init-param>
+      <param-name>d</param-name>
+      <param-value> 60 </param-value>
+    </init-param>
+  </servlet>
+   <servlet-mapping>
+    <servlet-name>servlet2</servlet-name>
+    <url-pattern>/servlet9</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>servlet3</servlet-name>
+    <servlet-class>phas1package.servlet3</servlet-class>
+    <init-param>
+      <param-name>d</param-name>
+      <param-value> 70 </param-value>
+    </init-param>
+  </servlet>
+   <servlet-mapping>
+    <servlet-name>servlet3</servlet-name>
+    <url-pattern>/servlet9</url-pattern>
+  </servlet-mapping>
+  
+
+  <servlet>
+    <servlet-name>PostHandler</servlet-name>
+    <servlet-class>phas1package.PostHandler</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+    <servlet-name>PostHandler</servlet-name>
+    <url-pattern>/posthandler1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>GetHandler</servlet-name>
+    <servlet-class>phas1package.GetHandler</servlet-class>
+  </servlet>
+  
+   <servlet-mapping>
+    <servlet-name>GetHandler</servlet-name>
+    <url-pattern>/gethandler1</url-pattern>
+  </servlet-mapping>
+    
+  <------------------------------------------------------------------------------------------------>
+   <servlet>
+    <description></description>
+    <display-name>HomeServlet</display-name>
+    <servlet-name>HomeServlet</servlet-name>
+    <servlet-class>phas1package.HomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HomeServlet</servlet-name>
+    <url-pattern>/HomeServlet</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>validFilter</display-name>
+    <filter-name>validFilter</filter-name>
+    <filter-class>phas1package.validFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>validFilter</filter-name>
+    <servlet-name>HomeServlet</servlet-name>
+  </filter-mapping>
+  <filter>
+    <display-name>Datacheckfilter</display-name>
+    <filter-name>Datacheckfilter</filter-name>
+    <filter-class>phas1package.Datacheckfilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>Datacheckfilter</filter-name>
+    <servlet-name>HomeServlet</servlet-name>
+  </filter-mapping>
+  
+</web-app>
