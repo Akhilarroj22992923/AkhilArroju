@@ -1,0 +1,35 @@
+package phase2;
+
+import java.io.*;
+import java.io.PrintWriter;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+//@WebServlet("/EmployeeFetch")
+public class EmployeeFetch extends HttpServlet {
+
+        protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+                
+        	response.setContentType("text/html");
+        	PrintWriter pwriter = response.getWriter();
+
+        	String name = request.getParameter("userName");
+        	String password = request.getParameter("userPassword");
+
+        	 if (name == null & password == null) {
+        		 pwriter.println("No UserId was found in hidden form field.<br>");
+             } else {
+            	 pwriter.println("Username found in hidden form field: " + name + "<br>");
+            	 pwriter.println("Userpassword found in hidden form field: " + password + "<br>");
+             }
+        	 pwriter.println("</body></html>");
+         }
+        	
+        
+        protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+               
+                doGet(request, response);
+        }
+
+}
