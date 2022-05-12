@@ -1,1 +1,38 @@
 
+package phase2;
+
+
+import java.io.*;
+import javax.servlet.http.*;
+
+public class StoreData extends HttpServlet {
+ 
+	public void doGet(HttpServletRequest request, HttpServletResponse response){
+  try{
+      response.setContentType("text/html");
+      PrintWriter pwriter = response.getWriter();
+     
+      HttpSession session=request.getSession(false);
+      
+      String myName=(String)session.getAttribute("uname");
+      String myAge=(String)session.getAttribute("uage");
+      String myCity=(String)session.getAttribute("ucity");
+      String myGender=(String)session.getAttribute("ugender");
+      String myEmail=(String)session.getAttribute("uemail");
+      
+      pwriter.println("session creation time" + session.getCreationTime());
+      pwriter.println("session last accessed time" +session.getLastAccessedTime());
+      pwriter.println("session max interval time" +session.getMaxInactiveInterval());
+      pwriter.println("session servelt context" +session.getServletContext());
+      pwriter.println("session servelt context" +session.getId());
+      pwriter.println(session.isNew());
+      
+      pwriter.print("Name: "+myName+" Age: "+myAge);
+      pwriter.print("City: "+myCity+" Gender: "+myGender);
+      pwriter.print("Email: "+myEmail);
+      pwriter.close();
+  }catch(Exception exp){
+      System.out.println(exp);
+   }
+  }
+}
