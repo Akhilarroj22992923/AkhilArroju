@@ -1,1 +1,43 @@
+package phase2;
 
+import java.io.*;
+import javax.servlet.http.*;
+
+
+public class EmployeeHome extends HttpServlet {
+   
+	public void doGet(HttpServletRequest request, HttpServletResponse response){
+     try{
+      response.setContentType("text/html");
+      PrintWriter pwriter = response.getWriter();
+
+      String name = request.getParameter("userName");
+      String age = request.getParameter("userAge");
+      String city = request.getParameter("userCity");
+      String gender = request.getParameter("userGender");
+      String email = request.getParameter("userEmail");
+      
+      pwriter.print("Welcome "+name);
+      
+      pwriter.print("Your Name is: "+name);
+      pwriter.print("Your Age is: "+age);
+      pwriter.print("Your City is: "+city);
+      pwriter.print("Your Gender is: "+gender);
+      pwriter.print("Your Email is: "+email);
+      
+      //creating the HttpSession below
+      HttpSession session=request.getSession(); 
+      
+      session.setAttribute("uname",name);
+      session.setAttribute("uage",age);
+      session.setAttribute("ucity",city);
+      session.setAttribute("ugender",gender);
+      session.setAttribute("uemail",email);
+      
+      pwriter.print("<a href='welcome'>view details</a>");
+      pwriter.close();
+    }catch(Exception exp){
+       System.out.println(exp);
+     }
+  }
+}
