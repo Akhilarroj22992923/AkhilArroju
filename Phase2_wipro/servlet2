@@ -1,0 +1,48 @@
+package phas1package;
+
+
+
+import java.io.*;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/servlet2")
+public class servlet2 extends HttpServlet {
+   
+        protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+               
+        	
+			PrintWriter pw=response.getWriter();
+            response.setContentType("text/html");
+
+            // I am using 2nd way to create Context object
+            ServletContext context=getServletContext();  
+
+            String s1=context.getInitParameter("a");
+            String s2=context.getInitParameter("b");
+            String s3=context.getInitParameter("c");
+            String s4=context.getInitParameter("d");
+            int t = s1 * s4;
+            int p = s2 - s3;
+        	pw.println("total is " + t);
+        	pw.println("total is " + p);
+            
+            
+
+            pw.println("n1 value is " +s1+ " and n2 is " +s2+"n1 value is " +s3+ " and n2 is " +s4);
+            
+            pw.println("</body></html>");
+        }
+
+        protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+                // TODO Auto-generated method stub
+                doGet(request, response);
+        }
+}
